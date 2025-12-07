@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const HowTosPage = () => {
   return (
@@ -45,7 +46,8 @@ const HowTosPage = () => {
           </p>
 
           <h3 className="docs-page__subsection-title">Step 1: Create Login Component</h3>
-          <pre><code>{`// src/extensions/auth/CustomLoginScreen.tsx
+          <CodeBlock
+            code={`// src/extensions/auth/CustomLoginScreen.tsx
 import React, { useState } from 'react';
 import { useAuth } from '@findesktop/hooks';
 import './CustomLoginScreen.css';
@@ -102,18 +104,26 @@ export const CustomLoginScreen = () => {
       </div>
     </div>
   );
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Custom Login Screen Component"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 2: Register Login Screen</h3>
-          <pre><code>{`// src/extensions/config.ts
+          <CodeBlock
+            code={`// src/extensions/config.ts
 import { CustomLoginScreen } from './auth/CustomLoginScreen';
 
 export const customComponents = {
   loginScreen: CustomLoginScreen
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Register Custom Login Screen"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 3: Style Your Login</h3>
-          <pre><code>{`/* src/extensions/auth/CustomLoginScreen.css */
+          <CodeBlock
+            code={`/* src/extensions/auth/CustomLoginScreen.css */
 .custom-login {
   display: flex;
   align-items: center;
@@ -134,7 +144,10 @@ export const customComponents = {
 .custom-login__logo {
   width: 80px;
   margin-bottom: 1rem;
-}`}</code></pre>
+}`}
+            language="css"
+            title="Custom Login Screen Styles"
+          />
         </section>
 
         {/* Recipe 2: New Theme */}
@@ -145,7 +158,8 @@ export const customComponents = {
           </p>
 
           <h3 className="docs-page__subsection-title">Step 1: Define Theme</h3>
-          <pre><code>{`// src/extensions/themes/corporateTheme.ts
+          <CodeBlock
+            code={`// src/extensions/themes/corporateTheme.ts
 export const corporateTheme = {
   id: 'corporate',
   name: 'Corporate Theme',
@@ -185,25 +199,36 @@ export const corporateTheme = {
     '--chart-negative': '#ff4444',
     '--chart-neutral': '#999999'
   }
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Corporate Theme Definition"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 2: Register Theme</h3>
-          <pre><code>{`// src/extensions/config.ts
+          <CodeBlock
+            code={`// src/extensions/config.ts
 import { corporateTheme } from './themes/corporateTheme';
 
 export const customThemes = [
   corporateTheme
-];`}</code></pre>
+];`}
+            language="tsx"
+            title="Register Custom Theme"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 3: Add to Configuration</h3>
-          <pre><code>{`// public/config/findesktop-config.json
+          <CodeBlock
+            code={`// public/config/findesktop-config.json
 {
   "theme": {
     "default": "corporate",
     "allowUserSelection": true,
     "themes": ["light", "dark", "corporate"]
   }
-}`}</code></pre>
+}`}
+            language="json"
+            title="Theme Configuration"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 4: Test Your Theme</h3>
           <ol>
@@ -223,7 +248,8 @@ export const customThemes = [
           </p>
 
           <h3 className="docs-page__subsection-title">Step 1: Create FDC3 App</h3>
-          <pre><code>{`// src/extensions/apps/ChartApp/ChartApp.tsx
+          <CodeBlock
+            code={`// src/extensions/apps/ChartApp/ChartApp.tsx
 import React, { useState, useEffect } from 'react';
 import { useChannel, useFDC3 } from '@findesktop/hooks';
 
@@ -271,10 +297,14 @@ export const ChartApp = () => {
       </div>
     </div>
   );
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Chart App with FDC3 Support"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 2: Register Intent Handlers</h3>
-          <pre><code>{`// src/extensions/apps/ChartApp/intents.ts
+          <CodeBlock
+            code={`// src/extensions/apps/ChartApp/intents.ts
 export const chartIntents = {
   'ViewChart': async (context) => {
     if (context.type === 'fdc3.instrument') {
@@ -282,10 +312,14 @@ export const chartIntents = {
       window.open(\`/chart?symbol=\${context.id.ticker}\`);
     }
   }
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Chart Intent Handlers"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 3: Configure App Metadata</h3>
-          <pre><code>{`// public/config/findesktop-config.json
+          <CodeBlock
+            code={`// public/config/findesktop-config.json
 {
   "apps": [
     {
@@ -304,7 +338,10 @@ export const chartIntents = {
       }
     }
   ]
-}`}</code></pre>
+}`}
+            language="json"
+            title="App Metadata Configuration"
+          />
         </section>
 
         {/* Recipe 4: Notification Actions */}
@@ -315,7 +352,8 @@ export const chartIntents = {
           </p>
 
           <h3 className="docs-page__subsection-title">Step 1: Create Notification with Actions</h3>
-          <pre><code>{`import { useNotifications } from '@findesktop/hooks';
+          <CodeBlock
+            code={`import { useNotifications } from '@findesktop/hooks';
 
 const OrderConfirmation = () => {
   const { notify } = useNotifications();
@@ -354,10 +392,14 @@ const OrderConfirmation = () => {
   };
 
   return <div>...</div>;
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Notification with Actions"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 2: Add Rich Content</h3>
-          <pre><code>{`const handlePriceAlert = (alert) => {
+          <CodeBlock
+            code={`const handlePriceAlert = (alert) => {
   notify({
     type: 'warning',
     title: 'Price Alert Triggered',
@@ -394,10 +436,14 @@ const OrderConfirmation = () => {
       }
     ]
   });
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Notification with Rich Content"
+          />
 
           <h3 className="docs-page__subsection-title mt-lg">Step 3: Handle Notification Events</h3>
-          <pre><code>{`// Listen for notification interactions
+          <CodeBlock
+            code={`// Listen for notification interactions
 const { onNotificationClick } = useNotifications();
 
 useEffect(() => {
@@ -407,7 +453,10 @@ useEffect(() => {
   });
   
   return unsubscribe;
-}, []);`}</code></pre>
+}, []);`}
+            language="tsx"
+            title="Handle Notification Events"
+          />
         </section>
 
         {/* More Recipes */}

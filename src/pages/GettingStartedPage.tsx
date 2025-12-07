@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const GettingStartedPage = () => {
   return (
@@ -17,9 +18,12 @@ const GettingStartedPage = () => {
             <li>A modern code editor (we recommend VS Code)</li>
           </ul>
           <p>You can verify your installations by running:</p>
-          <pre><code>{`node --version
+          <CodeBlock 
+            code={`node --version
 npm --version
-git --version`}</code></pre>
+git --version`}
+            language="bash"
+          />
         </section>
 
         {/* Installation */}
@@ -29,39 +33,51 @@ git --version`}</code></pre>
           <div className="docs-page__subsection">
             <h3 className="docs-page__subsection-title">1. Clone the Repository</h3>
             <p>Clone the FinDesktop repository to your local machine:</p>
-            <pre><code>{`git clone https://github.com/bhushanpoojary/fin-desktop.git
-cd findesktop`}</code></pre>
+            <CodeBlock 
+              code={`git clone https://github.com/bhushanpoojary/fin-desktop.git
+cd findesktop`}
+              language="bash"
+            />
           </div>
 
           <div className="docs-page__subsection">
             <h3 className="docs-page__subsection-title">2. Install Dependencies</h3>
             <p>Install all required dependencies using npm or yarn:</p>
-            <pre><code>{`# Using npm
+            <CodeBlock 
+              code={`# Using npm
 npm install
 
 # Or using yarn
-yarn install`}</code></pre>
+yarn install`}
+              language="bash"
+            />
           </div>
 
           <div className="docs-page__subsection">
             <h3 className="docs-page__subsection-title">3. Run the Development Server</h3>
             <p>Start the development server to run FinDesktop locally:</p>
-            <pre><code>{`# Using npm
+            <CodeBlock 
+              code={`# Using npm
 npm run dev
 
 # Or using yarn
-yarn dev`}</code></pre>
+yarn dev`}
+              language="bash"
+            />
             <p>The application will be available at <code>http://localhost:5173</code> (or the port shown in your terminal).</p>
           </div>
 
           <div className="docs-page__subsection">
             <h3 className="docs-page__subsection-title">4. Build for Production</h3>
             <p>When you're ready to build for production:</p>
-            <pre><code>{`# Using npm
+            <CodeBlock 
+              code={`# Using npm
 npm run build
 
 # Or using yarn
-yarn build`}</code></pre>
+yarn build`}
+              language="bash"
+            />
             <p>The production-ready files will be in the <code>dist</code> folder.</p>
           </div>
         </section>
@@ -76,7 +92,8 @@ yarn build`}</code></pre>
               FinDesktop is configured through a central configuration file. Create or modify 
               <code>public/config/findesktop-config.json</code> to customize your desktop:
             </p>
-            <pre><code>{`{
+            <CodeBlock 
+              code={`{
   "productName": "MyTradingDesk",
   "branding": {
     "companyName": "My Company",
@@ -107,7 +124,10 @@ yarn build`}</code></pre>
     "default": "dark",
     "themes": ["light", "dark"]
   }
-}`}</code></pre>
+}`}
+              language="json"
+              title="findesktop-config.json"
+            />
           </div>
 
           <div className="docs-page__subsection">
@@ -133,7 +153,8 @@ yarn build`}</code></pre>
               <li>Restart the development server</li>
             </ol>
             <p>Example app component:</p>
-            <pre><code>{`import React from 'react';
+            <CodeBlock 
+              code={`import React from 'react';
 
 const MyApp = () => {
   return (
@@ -144,7 +165,10 @@ const MyApp = () => {
   );
 };
 
-export default MyApp;`}</code></pre>
+export default MyApp;`}
+              language="tsx"
+              title="MyApp.tsx"
+            />
           </div>
         </section>
 

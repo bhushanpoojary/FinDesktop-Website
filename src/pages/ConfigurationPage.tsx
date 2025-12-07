@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const ConfigurationPage = () => {
   return (
@@ -25,7 +26,8 @@ const ConfigurationPage = () => {
               configuration API.
             </p>
           </div>
-          <pre><code>{`{
+          <CodeBlock
+            code={`{
   // Product identification
   "productName": "MyFinDesktop",
   "version": "1.0.0",
@@ -63,7 +65,10 @@ const ConfigurationPage = () => {
     "workspaces": true,
     "fdc3": true
   }
-}`}</code></pre>
+}`}
+            language="json"
+            title="FinDesktop Configuration Structure"
+          />
         </section>
 
         {/* Auth Provider */}
@@ -74,7 +79,8 @@ const ConfigurationPage = () => {
             organization's authentication system.
           </p>
           <h3 className="docs-page__subsection-title">Interface Definition</h3>
-          <pre><code>{`export interface IAuthProvider {
+          <CodeBlock
+            code={`export interface IAuthProvider {
   // Authenticate user and return session
   login(credentials: Credentials): Promise<AuthSession>;
   
@@ -89,10 +95,14 @@ const ConfigurationPage = () => {
   
   // Get current user info
   getCurrentUser(): Promise<User>;
-}`}</code></pre>
+}`}
+            language="tsx"
+            title="IAuthProvider Interface"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Implementation Example</h3>
-          <pre><code>{`// src/extensions/auth/MyAuthProvider.ts
+          <CodeBlock
+            code={`// src/extensions/auth/MyAuthProvider.ts
 import { IAuthProvider, AuthSession, Credentials } from '@findesktop/types';
 
 export class MyAuthProvider implements IAuthProvider {
@@ -143,13 +153,20 @@ export class MyAuthProvider implements IAuthProvider {
     const response = await fetch('/api/auth/user');
     return response.json();
   }
-}`}</code></pre>
+}`}
+            language="tsx"
+            title="MyAuthProvider Implementation"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Register Your Provider</h3>
-          <pre><code>{`// src/extensions/config.ts
+          <CodeBlock
+            code={`// src/extensions/config.ts
 import { MyAuthProvider } from './auth/MyAuthProvider';
 
-export const authProvider = new MyAuthProvider();`}</code></pre>
+export const authProvider = new MyAuthProvider();`}
+            language="tsx"
+            title="Register Auth Provider"
+          />
         </section>
 
         {/* Product Branding */}
@@ -158,7 +175,8 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
           <p>
             Customize the visual appearance and branding of your desktop application.
           </p>
-          <pre><code>{`export interface IProductBranding {
+          <CodeBlock
+            code={`export interface IProductBranding {
   companyName: string;
   productName: string;
   logoUrl: string;
@@ -174,10 +192,14 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
     logoUrl?: string;
     title?: string;
   };
-}`}</code></pre>
+}`}
+            language="tsx"
+            title="IProductBranding Interface"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Example Configuration</h3>
-          <pre><code>{`{
+          <CodeBlock
+            code={`{
   "branding": {
     "companyName": "Acme Trading Corp",
     "productName": "Acme Desktop",
@@ -195,7 +217,10 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
       "title": "Welcome to Acme Desktop"
     }
   }
-}`}</code></pre>
+}`}
+            language="json"
+            title="Branding Configuration Example"
+          />
         </section>
 
         {/* Theme Config */}
@@ -204,7 +229,8 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
           <p>
             Define custom themes or configure the built-in light and dark themes.
           </p>
-          <pre><code>{`{
+          <CodeBlock
+            code={`{
   "theme": {
     "default": "dark",
     "allowUserSelection": true,
@@ -241,7 +267,10 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
       }
     ]
   }
-}`}</code></pre>
+}`}
+            language="json"
+            title="Theme Configuration"
+          />
         </section>
 
         {/* Channels Config */}
@@ -250,7 +279,8 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
           <p>
             Define the channels available in your desktop for context linking.
           </p>
-          <pre><code>{`{
+          <CodeBlock
+            code={`{
   "channels": [
     {
       "id": "red",
@@ -283,7 +313,10 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
       "type": "system"
     }
   ]
-}`}</code></pre>
+}`}
+            language="json"
+            title="Channels Configuration"
+          />
         </section>
 
         {/* Example Configs */}
@@ -295,7 +328,8 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
             <summary style={{ cursor: 'pointer', fontWeight: 600, padding: 'var(--spacing-md)', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
               Click to expand full configuration
             </summary>
-            <pre><code>{`{
+            <CodeBlock
+              code={`{
   "productName": "BankTrader Pro",
   "version": "2.1.0",
   "branding": {
@@ -340,7 +374,10 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
     "fdc3": true,
     "analytics": true
   }
-}`}</code></pre>
+}`}
+              language="json"
+              title="Trading Bank Configuration Example"
+            />
           </details>
 
           <h3 className="docs-page__subsection-title mt-xl">Demo/Development Example</h3>
@@ -348,7 +385,8 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
             <summary style={{ cursor: 'pointer', fontWeight: 600, padding: 'var(--spacing-md)', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
               Click to expand full configuration
             </summary>
-            <pre><code>{`{
+            <CodeBlock
+              code={`{
   "productName": "FinDesktop Demo",
   "version": "1.0.0",
   "branding": {
@@ -383,7 +421,10 @@ export const authProvider = new MyAuthProvider();`}</code></pre>
     "workspaces": true,
     "fdc3": true
   }
-}`}</code></pre>
+}`}
+              language="json"
+              title="Demo/Development Configuration Example"
+            />
           </details>
         </section>
 

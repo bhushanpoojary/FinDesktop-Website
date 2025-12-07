@@ -1,47 +1,99 @@
 .main-layout {
   display: flex;
   min-height: 100vh;
-  background-color: #f8f9fa;
+  background: linear-gradient(180deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
+  position: relative;
+}
+
+.main-layout::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .main-layout__wrapper {
   flex: 1;
-  margin-left: 260px;
+  margin-left: 280px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  position: relative;
+  z-index: 1;
 }
 
 .main-layout__content {
   flex: 1;
-  padding: 2rem 3rem;
+  padding: var(--space-3xl) var(--space-4xl);
   max-width: 100%;
   width: 100%;
+  animation: fadeIn 0.6s ease-out;
 }
 
 .main-layout__footer {
-  padding: 1.5rem 3rem;
-  background-color: #ffffff;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280;
-  font-size: 0.875rem;
+  padding: var(--space-2xl) var(--space-3xl);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--color-gray-200);
+  color: var(--color-gray-600);
+  font-size: var(--text-sm);
   text-align: center;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.main-layout__footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-primary-300) 50%, transparent 100%);
 }
 
 .main-layout__footer p {
   margin: 0;
+  font-weight: var(--font-medium);
+}
+
+@media (max-width: 1024px) {
+  .main-layout__content {
+    padding: var(--space-2xl) var(--space-xl);
+  }
 }
 
 @media (max-width: 768px) {
+  .main-layout::before {
+    width: 400px;
+    height: 400px;
+  }
+
   .main-layout__wrapper {
     margin-left: 0;
   }
 
   .main-layout__content {
-    padding: 1.5rem 1rem;
+    padding: var(--space-2xl) var(--space-lg);
   }
 
   .main-layout__footer {
-    padding: 1.5rem 1rem;
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .main-layout__content {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  .main-layout__footer {
+    padding: var(--space-lg) var(--space-md);
+    font-size: var(--text-xs);
   }
 }

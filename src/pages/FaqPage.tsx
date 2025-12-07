@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './FaqPage.css';
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 interface FaqItemProps {
   question: string;
@@ -177,12 +178,16 @@ const FaqPage = () => {
                   <li>Check the Electron developer console for errors (View → Toggle Developer Tools)</li>
                   <li>Verify <code>electron/main.cjs</code> exists and has correct paths</li>
                 </ol>
-                <pre><code>{`// Typical startup sequence
+                <CodeBlock
+                  code={`// Typical startup sequence
 # Terminal 1
 npm run dev
 
 # Terminal 2 (after dev server is running)
-npm run electron`}</code></pre>
+npm run electron`}
+                  language="bash"
+                  title="Electron Startup Sequence"
+                />
               </>
             }
           />
@@ -225,10 +230,14 @@ npm run electron`}</code></pre>
                   <li>Check browser DevTools for CSS variable values</li>
                   <li>Clear browser cache and reload</li>
                 </ol>
-                <pre><code>{`// Verify theme variables are applied
+                <CodeBlock
+                  code={`// Verify theme variables are applied
 // In browser console:
 getComputedStyle(document.documentElement)
-  .getPropertyValue('--primary-color')`}</code></pre>
+  .getPropertyValue('--primary-color')`}
+                  language="tsx"
+                  title="Verify Theme Variables"
+                />
               </>
             }
           />
@@ -245,7 +254,8 @@ getComputedStyle(document.documentElement)
                   <li>Look for errors in the browser console</li>
                   <li>Verify the app icon path is correct and file exists</li>
                 </ol>
-                <pre><code>{`// Example app registration
+                <CodeBlock
+                  code={`// Example app registration
 {
   "apps": [
     {
@@ -255,7 +265,10 @@ getComputedStyle(document.documentElement)
       "icon": "/icons/my-app.svg"  // Must exist
     }
   ]
-}`}</code></pre>
+}`}
+                  language="json"
+                  title="App Registration Example"
+                />
               </>
             }
           />
@@ -276,11 +289,15 @@ getComputedStyle(document.documentElement)
                   <li>Look for errors in console when saving workspace</li>
                   <li>Ensure workspace manager is properly initialized</li>
                 </ul>
-                <pre><code>{`// Check localStorage usage
+                <CodeBlock
+                  code={`// Check localStorage usage
 console.log(localStorage.getItem('findesktop-workspace'));
 
 // Clear if needed
-localStorage.removeItem('findesktop-workspace');`}</code></pre>
+localStorage.removeItem('findesktop-workspace');`}
+                  language="tsx"
+                  title="Check localStorage"
+                />
               </>
             }
           />
@@ -297,10 +314,14 @@ localStorage.removeItem('findesktop-workspace');`}</code></pre>
                   <li>Look for errors in console</li>
                   <li>Verify FDC3 is enabled in features configuration</li>
                 </ol>
-                <pre><code>{`// Debug channel state
+                <CodeBlock
+                  code={`// Debug channel state
 const { currentChannel, context } = useChannel();
 console.log('Current channel:', currentChannel);
-console.log('Current context:', context);`}</code></pre>
+console.log('Current context:', context);`}
+                  language="tsx"
+                  title="Debug Channel State"
+                />
               </>
             }
           />
@@ -317,13 +338,17 @@ console.log('Current context:', context);`}</code></pre>
                   <li>Use Chrome DevTools Memory Profiler to identify leaks</li>
                   <li>Update to latest Electron version</li>
                 </ul>
-                <pre><code>{`// Proper cleanup example
+                <CodeBlock
+                  code={`// Proper cleanup example
 useEffect(() => {
   const unsubscribe = bus.subscribe('event', handler);
   
   // Cleanup when component unmounts
   return () => unsubscribe();
-}, [bus]);`}</code></pre>
+}, [bus]);`}
+                  language="tsx"
+                  title="Proper Event Listener Cleanup"
+                />
               </>
             }
           />
@@ -365,7 +390,8 @@ useEffect(() => {
                   <li><strong>Console logging:</strong> Use <code>console.log</code>, <code>console.error</code>, etc.</li>
                   <li><strong>React Error Boundaries:</strong> Wrap components to catch rendering errors</li>
                 </ul>
-                <pre><code>{`// Add debugging to your components
+                <CodeBlock
+                  code={`// Add debugging to your components
 const MyApp = () => {
   useEffect(() => {
     console.log('Component mounted');
@@ -374,7 +400,10 @@ const MyApp = () => {
   
   console.log('Component rendering');
   return <div>My App</div>;
-};`}</code></pre>
+};`}
+                  language="tsx"
+                  title="Debug Component Lifecycle"
+                />
               </>
             }
           />
@@ -390,7 +419,8 @@ const MyApp = () => {
                   <li>Run <code>npm run type-check</code> to check for errors</li>
                   <li>Enable strict mode in <code>tsconfig.json</code></li>
                 </ol>
-                <pre><code>{`import { Channel, ChannelContext } from '@findesktop/types';
+                <CodeBlock
+                  code={`import { Channel, ChannelContext } from '@findesktop/types';
 
 interface MyAppProps {
   initialSymbol?: string;
@@ -399,7 +429,10 @@ interface MyAppProps {
 const MyApp: React.FC<MyAppProps> = ({ initialSymbol }) => {
   const [symbol, setSymbol] = useState<string>(initialSymbol || '');
   // ...
-};`}</code></pre>
+};`}
+                  language="tsx"
+                  title="TypeScript Type Safety Example"
+                />
               </>
             }
           />

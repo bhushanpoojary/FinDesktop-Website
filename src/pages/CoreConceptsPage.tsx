@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const CoreConceptsPage = () => {
   return (
@@ -26,7 +27,8 @@ const CoreConceptsPage = () => {
             <li><strong>Cross-window communication:</strong> Messages work across Electron windows</li>
           </ul>
           <p>Example usage:</p>
-          <pre><code>{`import { useDesktopBus } from '@findesktop/hooks';
+          <CodeBlock 
+            code={`import { useDesktopBus } from '@findesktop/hooks';
 
 const MyApp = () => {
   const bus = useDesktopBus();
@@ -39,7 +41,10 @@ const MyApp = () => {
   };
   
   return <button onClick={handleClick}>Select AAPL</button>;
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Desktop Bus Example"
+          />
         </section>
 
         {/* Layout / Workspace */}
@@ -81,7 +86,8 @@ const MyApp = () => {
             <li><strong>FDC3 compatible:</strong> Full support for FDC3 context types</li>
             <li><strong>System & user channels:</strong> Private and shared channel support</li>
           </ul>
-          <pre><code>{`import { useChannel } from '@findesktop/hooks';
+          <CodeBlock 
+            code={`import { useChannel } from '@findesktop/hooks';
 
 const ChartApp = () => {
   const { currentChannel, context } = useChannel();
@@ -93,7 +99,10 @@ const ChartApp = () => {
   }, [context]);
   
   return <div>Listening on {currentChannel?.name} channel</div>;
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Channel Hook Example"
+          />
         </section>
 
         {/* Auth */}
@@ -133,7 +142,8 @@ const ChartApp = () => {
             <li><strong>Brand customization:</strong> Apply your company's colors and styling</li>
             <li><strong>Runtime switching:</strong> Users can change themes without restart</li>
           </ul>
-          <pre><code>{`// Custom theme definition
+          <CodeBlock 
+            code={`// Custom theme definition
 export const myTheme = {
   id: 'corporate',
   name: 'Corporate Theme',
@@ -144,7 +154,10 @@ export const myTheme = {
     '--text-color': '#333333',
     '--border-color': '#e0e0e0'
   }
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Custom Theme"
+          />
         </section>
 
         {/* Notifications */}
@@ -162,7 +175,8 @@ export const myTheme = {
             <li><strong>Priority levels:</strong> Info, warning, error, and success types</li>
             <li><strong>Rich content:</strong> Support for HTML content and custom styling</li>
           </ul>
-          <pre><code>{`import { useNotifications } from '@findesktop/hooks';
+          <CodeBlock 
+            code={`import { useNotifications } from '@findesktop/hooks';
 
 const OrderApp = () => {
   const { notify } = useNotifications();
@@ -186,7 +200,10 @@ const OrderApp = () => {
       });
     }
   };
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="Notifications Example"
+          />
         </section>
 
         {/* Summary */}

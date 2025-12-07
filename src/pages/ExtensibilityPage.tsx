@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const ExtensibilityPage = () => {
   return (
@@ -18,7 +19,8 @@ const ExtensibilityPage = () => {
             Code in this folder is designed to survive git pulls and framework updates.
           </p>
           <h3 className="docs-page__subsection-title">Directory Structure</h3>
-          <pre><code>{`src/extensions/
+          <CodeBlock
+            code={`src/extensions/
 ├── auth/
 │   └── CustomAuthProvider.ts
 ├── apps/
@@ -31,7 +33,10 @@ const ExtensibilityPage = () => {
 │   └── useCustomHook.ts
 ├── services/
 │   └── DataService.ts
-└── config.ts  // Main extension configuration`}</code></pre>
+└── config.ts  // Main extension configuration`}
+            language="bash"
+            title="Extensions Directory Structure"
+          />
 
           <div className="info-box info-box--success mt-lg">
             <div className="info-box__title">Best Practice</div>
@@ -109,7 +114,8 @@ const ExtensibilityPage = () => {
 
           <h3 className="docs-page__subsection-title">Step 1: Create App Component</h3>
           <p>Create your app in the extensions folder:</p>
-          <pre><code>{`// src/extensions/apps/MarketWatchApp/MarketWatchApp.tsx
+          <CodeBlock
+            code={`// src/extensions/apps/MarketWatchApp/MarketWatchApp.tsx
 import React, { useState } from 'react';
 import { useDesktopBus, useChannel } from '@findesktop/hooks';
 import './MarketWatchApp.css';
@@ -142,11 +148,15 @@ export const MarketWatchApp = () => {
       </ul>
     </div>
   );
-};`}</code></pre>
+};`}
+            language="tsx"
+            title="MarketWatchApp Component"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Step 2: Register the App</h3>
           <p>Add your app to the configuration:</p>
-          <pre><code>{`// public/config/findesktop-config.json
+          <CodeBlock
+            code={`// public/config/findesktop-config.json
 {
   "apps": [
     {
@@ -158,11 +168,15 @@ export const MarketWatchApp = () => {
       "description": "Real-time market data viewer"
     }
   ]
-}`}</code></pre>
+}`}
+            language="json"
+            title="App Registration"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Step 3: Add Routing</h3>
           <p>Register the route in your extensions config:</p>
-          <pre><code>{`// src/extensions/config.ts
+          <CodeBlock
+            code={`// src/extensions/config.ts
 import { MarketWatchApp } from './apps/MarketWatchApp/MarketWatchApp';
 
 export const extensionRoutes = [
@@ -170,14 +184,18 @@ export const extensionRoutes = [
     path: '/market-watch',
     component: MarketWatchApp
   }
-];`}</code></pre>
+];`}
+            language="tsx"
+            title="Route Registration"
+          />
 
           <h3 className="docs-page__subsection-title mt-xl">Example: Order Ticket App</h3>
           <details className="mt-lg">
             <summary style={{ cursor: 'pointer', fontWeight: 600, padding: 'var(--spacing-md)', backgroundColor: 'var(--color-bg-secondary)', borderRadius: 'var(--radius-md)' }}>
               Click to see full example
             </summary>
-            <pre><code>{`// src/extensions/apps/OrderTicketApp/OrderTicketApp.tsx
+            <CodeBlock
+              code={`// src/extensions/apps/OrderTicketApp/OrderTicketApp.tsx
 import React, { useState, useEffect } from 'react';
 import { useChannel, useNotifications } from '@findesktop/hooks';
 
@@ -240,7 +258,10 @@ export const OrderTicketApp = () => {
       </form>
     </div>
   );
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="OrderTicketApp Full Example"
+            />
           </details>
         </section>
 
@@ -250,7 +271,8 @@ export const OrderTicketApp = () => {
           <p>
             Encapsulate business logic and data access in reusable services.
           </p>
-          <pre><code>{`// src/extensions/services/MarketDataService.ts
+          <CodeBlock
+            code={`// src/extensions/services/MarketDataService.ts
 export class MarketDataService {
   private ws: WebSocket | null = null;
   private subscribers = new Map<string, Set<(data: any) => void>>();
@@ -289,7 +311,10 @@ export class MarketDataService {
   }
 }
 
-export const marketDataService = new MarketDataService();`}</code></pre>
+export const marketDataService = new MarketDataService();`}
+            language="tsx"
+            title="MarketDataService Example"
+          />
         </section>
 
         <div className="info-box info-box--info mt-3xl">

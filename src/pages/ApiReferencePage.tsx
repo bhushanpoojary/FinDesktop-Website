@@ -1,4 +1,5 @@
-import './GettingStartedPage.css';
+import '../styles/docs-pages.css';
+import CodeBlock from '../components/CodeBlock';
 
 const ApiReferencePage = () => {
   return (
@@ -19,7 +20,8 @@ const ApiReferencePage = () => {
             <p className="card__description">
               Interface for implementing custom authentication providers.
             </p>
-            <pre><code>{`interface IAuthProvider {
+            <CodeBlock
+              code={`interface IAuthProvider {
   // Authenticate user with credentials
   login(credentials: Credentials): Promise<AuthSession>;
   
@@ -54,7 +56,10 @@ interface User {
   displayName: string;
   email?: string;
   roles?: string[];
-}`}</code></pre>
+}`}
+              language="tsx"
+              title="IAuthProvider Interface"
+            />
           </div>
 
           {/* IProductBranding */}
@@ -63,7 +68,8 @@ interface User {
             <p className="card__description">
               Configuration interface for product branding and visual identity.
             </p>
-            <pre><code>{`interface IProductBranding {
+            <CodeBlock
+              code={`interface IProductBranding {
   companyName: string;
   productName: string;
   logoUrl: string;
@@ -85,7 +91,10 @@ interface LoginScreenConfig {
   logoUrl?: string;
   title?: string;
   subtitle?: string;
-}`}</code></pre>
+}`}
+              language="tsx"
+              title="IProductBranding Interface"
+            />
           </div>
 
           {/* Theme */}
@@ -94,7 +103,8 @@ interface LoginScreenConfig {
             <p className="card__description">
               Type definition for theme configuration and customization.
             </p>
-            <pre><code>{`interface Theme {
+            <CodeBlock
+              code={`interface Theme {
   id: string;
   name: string;
   description?: string;
@@ -122,7 +132,10 @@ interface ThemeConfig {
   default: string;
   allowUserSelection: boolean;
   themes: Theme[];
-}`}</code></pre>
+}`}
+              language="tsx"
+              title="Theme Interface"
+            />
           </div>
 
           {/* Channel */}
@@ -131,7 +144,8 @@ interface ThemeConfig {
             <p className="card__description">
               Channel definition for context linking and data sharing between apps.
             </p>
-            <pre><code>{`interface Channel {
+            <CodeBlock
+              code={`interface Channel {
   id: string;
   name: string;
   color: string;
@@ -169,7 +183,10 @@ interface IChannelProvider {
     contextType: string,
     handler: (context: ChannelContext) => void
   ): () => void;
-}`}</code></pre>
+}`}
+              language="tsx"
+              title="Channel Interface"
+            />
           </div>
 
           {/* Notification */}
@@ -178,7 +195,8 @@ interface IChannelProvider {
             <p className="card__description">
               Type definitions for the notification system.
             </p>
-            <pre><code>{`interface Notification {
+            <CodeBlock
+              code={`interface Notification {
   id: string;
   type: 'info' | 'success' | 'warning' | 'error';
   title: string;
@@ -211,7 +229,10 @@ interface INotificationService {
   
   // Add listener for notification events
   onNotificationClick(handler: (notification: Notification) => void): () => void;
-}`}</code></pre>
+}`}
+              language="tsx"
+              title="Notification Interface"
+            />
           </div>
         </section>
 
@@ -225,7 +246,8 @@ interface INotificationService {
             <p className="card__description">
               Hook for accessing the Desktop Bus for inter-app messaging.
             </p>
-            <pre><code>{`function useDesktopBus(): DesktopBus
+            <CodeBlock
+              code={`function useDesktopBus(): DesktopBus
 
 interface DesktopBus {
   // Publish an event to the bus
@@ -256,7 +278,10 @@ const MyComponent = () => {
   const handleClick = () => {
     bus.publish('instrument.selected', { symbol: 'AAPL' });
   };
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useDesktopBus Hook"
+            />
           </div>
 
           {/* useChannel */}
@@ -265,7 +290,8 @@ const MyComponent = () => {
             <p className="card__description">
               Hook for channel operations and context sharing.
             </p>
-            <pre><code>{`function useChannel(): ChannelHook
+            <CodeBlock
+              code={`function useChannel(): ChannelHook
 
 interface ChannelHook {
   // Current active channel
@@ -309,7 +335,10 @@ const ChartApp = () => {
       id: { ticker: symbol }
     });
   };
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useChannel Hook"
+            />
           </div>
 
           {/* useTheme */}
@@ -318,7 +347,8 @@ const ChartApp = () => {
             <p className="card__description">
               Hook for theme management and customization.
             </p>
-            <pre><code>{`function useTheme(): ThemeHook
+            <CodeBlock
+              code={`function useTheme(): ThemeHook
 
 interface ThemeHook {
   // Current active theme
@@ -350,7 +380,10 @@ const ThemeSelector = () => {
       ))}
     </select>
   );
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useTheme Hook"
+            />
           </div>
 
           {/* useAuth */}
@@ -359,7 +392,8 @@ const ThemeSelector = () => {
             <p className="card__description">
               Hook for authentication state and operations.
             </p>
-            <pre><code>{`function useAuth(): AuthHook
+            <CodeBlock
+              code={`function useAuth(): AuthHook
 
 interface AuthHook {
   // Current user (null if not authenticated)
@@ -393,7 +427,10 @@ const LoginScreen = () => {
     e.preventDefault();
     await login(credentials);
   };
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useAuth Hook"
+            />
           </div>
 
           {/* useNotifications */}
@@ -402,7 +439,8 @@ const LoginScreen = () => {
             <p className="card__description">
               Hook for displaying and managing notifications.
             </p>
-            <pre><code>{`function useNotifications(): NotificationsHook
+            <CodeBlock
+              code={`function useNotifications(): NotificationsHook
 
 interface NotificationsHook {
   // All active notifications
@@ -450,7 +488,10 @@ const OrderApp = () => {
       });
     }
   };
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useNotifications Hook"
+            />
           </div>
 
           {/* useFDC3 */}
@@ -459,7 +500,8 @@ const OrderApp = () => {
             <p className="card__description">
               Hook for FDC3 intents and advanced interoperability.
             </p>
-            <pre><code>{`function useFDC3(): FDC3Hook
+            <CodeBlock
+              code={`function useFDC3(): FDC3Hook
 
 interface FDC3Hook {
   // Raise an intent
@@ -513,7 +555,10 @@ const MyApp = () => {
       id: { ticker: symbol }
     });
   };
-};`}</code></pre>
+};`}
+              language="tsx"
+              title="useFDC3 Hook"
+            />
           </div>
         </section>
 
