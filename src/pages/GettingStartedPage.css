@@ -1,0 +1,27 @@
+.docs-page {
+  padding: var(--spacing-3xl) 0;
+}
+
+.docs-page__title {
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--color-border);
+}
+
+.docs-page__section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.docs-page__section-title {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+}
+
+.docs-page__subsection {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.docs-page__subsection-title {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}

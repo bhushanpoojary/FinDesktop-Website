@@ -1,0 +1,119 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.header__logo:hover {
+  color: var(--color-accent-light);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: var(--spacing-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-item {
+  margin: 0;
+}
+
+.header__nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color var(--transition-fast);
+  padding: var(--spacing-sm) 0;
+  display: block;
+}
+
+.header__nav-link:hover {
+  color: var(--color-text-inverse);
+}
+
+.header__nav-link--active {
+  color: var(--color-text-inverse);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.header__menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  line-height: 1;
+}
+
+.header__menu-toggle:hover {
+  color: var(--color-accent-light);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .header__nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .header__nav--open {
+    max-height: 500px;
+  }
+
+  .header__nav-list {
+    flex-direction: column;
+    gap: 0;
+    padding: var(--spacing-lg);
+  }
+
+  .header__nav-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .header__nav-link {
+    padding: var(--spacing-md) 0;
+  }
+
+  .header__menu-toggle {
+    display: block;
+  }
+}

@@ -1,11 +1,43 @@
-# React + TypeScript + Vite
+# FinDesktop Documentation Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A professional, modern documentation website for FinDesktop - built with React, TypeScript, and plain CSS.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Clean, Modern Design**: Professional fintech aesthetic with a dark navy color scheme
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Plain CSS**: No frameworks - uses CSS variables and BEM methodology
+- **Complete Documentation**: 8 comprehensive pages covering all aspects of FinDesktop
+- **Interactive Navigation**: Responsive header with mobile hamburger menu
+- **SEO Friendly**: Semantic HTML structure
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18.x or higher
+- npm 9.x or higher
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:5173`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+Production files will be in the `dist/` folder
 
 ## React Compiler
 
