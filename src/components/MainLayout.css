@@ -15,7 +15,7 @@
 .main-layout__content {
   flex: 1;
   padding: 2rem 3rem;
-  max-width: 1400px;
+  max-width: 100%;
   width: 100%;
 }
 
