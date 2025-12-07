@@ -27,47 +27,127 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* What is FinDesktop Section */}
-      <section className="section section--primary">
+      {/* What is FinDesktop Section - Modern UX Redesign */}
+      <section className="section section-what">
         <div className="container">
-          <div className="what-is">
-            <div className="what-is__content">
-              <h2>What is FinDesktop?</h2>
-              <p>
-                FinDesktop is an open-source framework that provides the essential building blocks 
-                for creating professional desktop applications for financial services. Built with modern 
-                web technologies, it offers a robust foundation for trading desktops, workspace management, 
-                and inter-app communication.
-              </p>
-              <p>
-                Whether you're building a trading platform, portfolio management system, or any 
-                financial application, FinDesktop accelerates your development with pre-built 
-                components and patterns.
+          <div className="section-what-wrapper">
+            {/* Header Section */}
+            <div className="section-what-header">
+              <div className="section-what-badge">
+                <svg className="badge-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M8 2L10.5 6.5L15.5 7L11.5 10.5L12.5 15.5L8 13L3.5 15.5L4.5 10.5L0.5 7L5.5 6.5L8 2Z" fill="currentColor"/>
+                </svg>
+                <span>Overview</span>
+              </div>
+              <h2 className="section-what-title">Build Enterprise Desktop Apps with Confidence</h2>
+              <p className="section-what-subtitle">
+                FinDesktop is a production-ready framework for creating sophisticated financial desktop applications. 
+                Ship faster with pre-built components, powerful APIs, and battle-tested patterns.
               </p>
             </div>
-            <div className="what-is__features">
-              <ul className="what-is__list">
-                <li className="what-is__list-item">
-                  <strong>Desktop Bus & Messaging</strong>
-                  Seamless inter-app communication with a powerful event bus
-                </li>
-                <li className="what-is__list-item">
-                  <strong>Workspace Management</strong>
-                  Save, restore, and share complex multi-window layouts
-                </li>
-                <li className="what-is__list-item">
-                  <strong>FDC3 Integration</strong>
-                  Full support for FDC3 standards and context channels
-                </li>
-                <li className="what-is__list-item">
-                  <strong>Theming & Branding</strong>
-                  Easily customize appearance to match your brand
-                </li>
-                <li className="what-is__list-item">
-                  <strong>Authentication</strong>
-                  Pluggable auth providers for enterprise security
-                </li>
-              </ul>
+
+            {/* Features Grid */}
+            <div className="feature-grid">
+              <div className="feature-card feature-card--primary">
+                <div className="feature-card-gradient"></div>
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">Powerful Event Bus</h3>
+                <p className="feature-description">
+                  Connect applications instantly with our pub/sub messaging system. Real-time data sharing across windows.
+                </p>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                    <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                    <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                    <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">Workspace Management</h3>
+                <p className="feature-description">
+                  Save and restore complex layouts. Perfect for traders managing dozens of windows.
+                </p>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M10 13C10 13.5304 10.2107 14.0391 10.5858 14.4142C10.9609 14.7893 11.4696 15 12 15C12.5304 15 13.0391 14.7893 13.4142 14.4142C13.7893 14.0391 14 13.5304 14 13C14 12.4696 13.7893 11.9609 13.4142 11.5858C13.0391 11.2107 12.5304 11 12 11C11.4696 11 10.9609 11.2107 10.5858 11.5858C10.2107 11.9609 10 12.4696 10 13Z" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M21 13C21 13 18 18 12 18C6 18 3 13 3 13C3 13 6 8 12 8C18 8 21 13 21 13Z" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">FDC3 Standard</h3>
+                <p className="feature-description">
+                  Full compliance with FDC3 2.0. Seamless integration with financial ecosystem.
+                </p>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2Z" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M12 6V12L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">Custom Themes</h3>
+                <p className="feature-description">
+                  Match your brand with CSS variables. Dark mode and custom palettes included.
+                </p>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M12 11V7C12 5.89543 11.1046 5 10 5C8.89543 5 8 5.89543 8 7V11" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">Enterprise Security</h3>
+                <p className="feature-description">
+                  SSO, OAuth, SAML support. Pluggable authentication for any provider.
+                </p>
+              </div>
+
+              <div className="feature-card">
+                <div className="feature-icon-wrapper">
+                  <svg className="feature-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+                <h3 className="feature-title">High Performance</h3>
+                <p className="feature-description">
+                  Handles 1000+ windows efficiently. Built for demanding trading environments.
+                </p>
+              </div>
+            </div>
+
+            {/* Bottom CTA */}
+            <div className="section-what-cta">
+              <div className="cta-content">
+                <div className="cta-stats">
+                  <div className="stat-item">
+                    <div className="stat-value">100%</div>
+                    <div className="stat-label">Open Source</div>
+                  </div>
+                  <div className="stat-divider"></div>
+                  <div className="stat-item">
+                    <div className="stat-value">TypeScript</div>
+                    <div className="stat-label">Type-Safe</div>
+                  </div>
+                  <div className="stat-divider"></div>
+                  <div className="stat-item">
+                    <div className="stat-value">Production</div>
+                    <div className="stat-label">Ready</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
