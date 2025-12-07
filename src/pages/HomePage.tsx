@@ -6,19 +6,19 @@ const HomePage = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
-        <h1 className="hero__title">FinDesktop</h1>
-        <p className="hero__subtitle">
+        <h1 className="hero-title">FinDesktop</h1>
+        <p className="hero-tagline">
           A powerful, enterprise-grade desktop framework built with Electron. High-performance workspace management, 
           advanced inter-app communication, and modern UI out of the box.
         </p>
         
-        <div className="hero__cta">
-          <Link to="/getting-started" className="btn btn--primary">
+        <div className="hero-buttons">
+          <Link to="/getting-started" className="btn-primary">
             Get Started →
           </Link>
           <a 
             href="https://github.com/bhushanpoojary/fin-desktop" 
-            className="btn btn--outline"
+            className="btn-secondary"
             target="_blank"
             rel="noopener noreferrer"
           >
