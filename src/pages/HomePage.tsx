@@ -153,84 +153,253 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Screenshots Section */}
-      <section className="section section--secondary screenshots">
+      {/* Screenshots Section - Enhanced UX */}
+      <section className="section section-action">
         <div className="container">
-          <h2 className="text-center">See It In Action</h2>
-          <p className="text-center text-secondary mb-2xl">
-            Explore the features and capabilities of FinDesktop
-          </p>
+          {/* Header with Badge */}
+          <div className="action-header">
+            <div className="action-badge">
+              <svg className="action-badge-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M8 2L10 6L14 6.5L11 9.5L11.5 14L8 12L4.5 14L5 9.5L2 6.5L6 6L8 2Z" fill="currentColor"/>
+              </svg>
+              <span>Live Demo</span>
+            </div>
+            <h2 className="action-title">See It In Action</h2>
+            <p className="action-subtitle">
+              Experience the power of FinDesktop with real-world examples and interactive demonstrations
+            </p>
+          </div>
           
-          <div className="screenshots__grid">
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: Multi-window workspace]
+          {/* Feature Showcase Grid */}
+          <div className="action-grid">
+            <div className="action-card action-card--featured">
+              <div className="action-card-badge">Most Popular</div>
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="14" y="3" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="3" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                  <rect x="14" y="14" width="7" height="7" rx="1" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">Multi-Window Workspaces</h3>
-                <p className="screenshot-card__description">
-                  Create complex layouts with multiple windows, tabs, and dockable panels
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-grid">
+                    <div className="placeholder-window"></div>
+                    <div className="placeholder-window"></div>
+                    <div className="placeholder-window"></div>
+                    <div className="placeholder-window"></div>
+                  </div>
+                  <div className="placeholder-label">Multi-window workspace</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Multi-Window Workspaces</h3>
+                <p className="action-card-description">
+                  Create complex layouts with multiple windows, tabs, and dockable panels. Perfect for traders managing dozens of applications simultaneously.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">Layouts</span>
+                  <span className="tag">Windows</span>
+                  <span className="tag">Panels</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: Channel linking]
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path d="M17 8L21 12M21 12L17 16M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <circle cx="7" cy="12" r="2" fill="currentColor"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">Channel Linking</h3>
-                <p className="screenshot-card__description">
-                  Link apps together to share context and synchronize data in real-time
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-channels">
+                    <div className="channel-indicator channel-red"></div>
+                    <div className="channel-indicator channel-blue"></div>
+                    <div className="channel-indicator channel-green"></div>
+                  </div>
+                  <div className="placeholder-label">Channel linking</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Channel Linking</h3>
+                <p className="action-card-description">
+                  Link apps together to share context and synchronize data in real-time across your workspace.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">Real-time</span>
+                  <span className="tag">Sync</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: Theme customization]
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 3C12 3 15 6 15 12C15 18 12 21 12 21" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 3C12 3 9 6 9 12C9 18 12 21 12 21" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M3 12H21" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">Theme Customization</h3>
-                <p className="screenshot-card__description">
-                  Switch between light and dark themes or create custom branded themes
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-theme">
+                    <div className="theme-swatch theme-light"></div>
+                    <div className="theme-swatch theme-dark"></div>
+                  </div>
+                  <div className="placeholder-label">Theme customization</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Theme Customization</h3>
+                <p className="action-card-description">
+                  Switch between light and dark themes or create custom branded themes for your organization.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">Branding</span>
+                  <span className="tag">Themes</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: Notifications]
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path d="M18 8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8C6 15 3 17 3 17H21C21 17 18 15 18 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13.73 21C13.5542 21.3031 13.3019 21.5547 12.9982 21.7295C12.6946 21.9044 12.3504 21.9965 12 21.9965C11.6496 21.9965 11.3054 21.9044 11.0018 21.7295C10.6982 21.5547 10.4458 21.3031 10.27 21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">Notification Center</h3>
-                <p className="screenshot-card__description">
-                  Centralized notification system with custom actions and persistence
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-notifications">
+                    <div className="notification-item"></div>
+                    <div className="notification-item"></div>
+                    <div className="notification-item"></div>
+                  </div>
+                  <div className="placeholder-label">Notifications</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Notification Center</h3>
+                <p className="action-card-description">
+                  Centralized notification system with custom actions, persistence, and priority management.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">Alerts</span>
+                  <span className="tag">Actions</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: Window docking]
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 8H8V12H4V8Z" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M10 8H14V12H10V8Z" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M16 8H20V12H16V8Z" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M8 8V4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M12 8V4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M16 8V4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">Window Docking</h3>
-                <p className="screenshot-card__description">
-                  Snap windows together with intelligent docking and magnetic alignment
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-docking">
+                    <div className="dock-window"></div>
+                    <div className="dock-window dock-window-snap"></div>
+                  </div>
+                  <div className="placeholder-label">Window docking</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Window Docking</h3>
+                <p className="action-card-description">
+                  Snap windows together with intelligent docking, magnetic alignment, and visual feedback.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">Docking</span>
+                  <span className="tag">Snap</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
-            <div className="screenshot-card">
-              <div className="screenshot-card__image">
-                [Screenshot: FDC3 demo]
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </div>
-              <div className="screenshot-card__content">
-                <h3 className="screenshot-card__title">FDC3 Compatibility</h3>
-                <p className="screenshot-card__description">
-                  Full FDC3 2.0 support for standards-based financial desktop interoperability
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-fdc3">
+                    <div className="fdc3-logo">FDC3</div>
+                    <div className="fdc3-badge">2.0</div>
+                  </div>
+                  <div className="placeholder-label">FDC3 demo</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">FDC3 Compatibility</h3>
+                <p className="action-card-description">
+                  Full FDC3 2.0 support for standards-based financial desktop interoperability and app communication.
                 </p>
+                <div className="action-card-tags">
+                  <span className="tag">FDC3 2.0</span>
+                  <span className="tag">Standard</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
