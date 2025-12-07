@@ -218,6 +218,9 @@
 .sidebar__footer {
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .sidebar__footer-link {
@@ -234,6 +237,13 @@
   font-size: 0.8125rem;
   font-weight: 500;
   transition: all 0.2s ease;
+}
+
+.sidebar__footer-link svg {
+  flex-shrink: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
 }
 
 .sidebar__footer-link:hover {
