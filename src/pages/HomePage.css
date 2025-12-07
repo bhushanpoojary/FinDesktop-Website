@@ -1067,7 +1067,7 @@
 .action-card--featured .action-card-title,
 .action-card--featured .action-card-description,
 .action-card--featured .placeholder-label {
-  color: #ffffff;
+  color: black;
 }
 
 .action-card--featured .action-card-description {
@@ -1301,6 +1301,96 @@
 @keyframes snap {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(-10px); }
+}
+
+.placeholder-persistence {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.persistence-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 200px;
+}
+
+.layout-save-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 2;
+}
+
+.layout-save-icon::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.layout-windows {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.layout-windows::before,
+.layout-windows::after {
+  content: '';
+  height: 50px;
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.layout-windows::before {
+  grid-column: 1 / 3;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+}
+
+.layout-windows::after {
+  grid-column: 3 / 4;
+  animation: fadeIn 1s ease-in-out infinite alternate;
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: translate(-50%, -50%) scale(1);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.4);
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 6px 24px rgba(99, 102, 241, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .placeholder-fdc3 {

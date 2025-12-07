@@ -369,6 +369,45 @@ const HomePage = () => {
             <div className="action-card">
               <div className="action-card-icon">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path d="M19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9L11 6H19C19.5304 6 20.0391 6.21071 20.4142 6.58579C20.7893 6.96086 21 7.46957 21 8V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M8 14L10 16L14 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <div className="action-card-image">
+                <div className="action-card-placeholder">
+                  <div className="placeholder-persistence">
+                    <div className="persistence-layout">
+                      <div className="layout-save-icon"></div>
+                      <div className="layout-windows"></div>
+                    </div>
+                  </div>
+                  <div className="placeholder-label">Workspace Persistence</div>
+                </div>
+              </div>
+              <div className="action-card-content">
+                <h3 className="action-card-title">Multi-Window Workspace Persistence</h3>
+                <p className="action-card-description">
+                  Save & restore fully customized multi-window layouts. Users can rearrange apps, snap windows, create multi-monitor layouts, and instantly restore the entire workspace at any time.
+                </p>
+                <div className="action-card-tags">
+                  <span className="tag">Layouts</span>
+                  <span className="tag">Persistence</span>
+                  <span className="tag">Productivity</span>
+                </div>
+              </div>
+              <div className="action-card-footer">
+                <button className="action-card-btn">
+                  <span>Try Demo</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div className="action-card">
+              <div className="action-card-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
                   <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
