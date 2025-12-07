@@ -17,7 +17,7 @@ const HomePage = () => {
             Get Started →
           </Link>
           <a 
-            href="https://github.com/yourusername/findesktop" 
+            href="https://github.com/bhushanpoojary/fin-desktop" 
             className="btn btn--outline"
             target="_blank"
             rel="noopener noreferrer"

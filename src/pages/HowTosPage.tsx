@@ -424,7 +424,7 @@ useEffect(() => {
           </ul>
           <p className="mt-lg">
             Have a recipe you'd like to see? 
-            <a href="https://github.com/yourusername/findesktop/discussions" target="_blank" rel="noopener noreferrer"> Request it on GitHub</a>!
+            <a href="https://github.com/bhushanpoojary/fin-desktop/discussions" target="_blank" rel="noopener noreferrer"> Request it on GitHub</a>!
           </p>
         </section>
       </div>

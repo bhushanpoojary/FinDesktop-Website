@@ -297,7 +297,7 @@ export const marketDataService = new MarketDataService();`}</code></pre>
           <p>
             Check the <a href="/how-tos">How-Tos</a> section for step-by-step guides on 
             common extensibility scenarios, or visit our 
-            <a href="https://github.com/yourusername/findesktop/discussions" target="_blank" rel="noopener noreferrer"> GitHub Discussions</a>.
+            <a href="https://github.com/bhushanpoojary/fin-desktop/discussions" target="_blank" rel="noopener noreferrer"> GitHub Discussions</a>.
           </p>
         </div>
       </div>

@@ -413,10 +413,10 @@ const MyApp: React.FC<MyAppProps> = ({ initialSymbol }) => {
           </p>
           <ul>
             <li>
-              Check <a href="https://github.com/yourusername/findesktop/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> for known problems
+              Check <a href="https://github.com/bhushanpoojary/fin-desktop/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a> for known problems
             </li>
             <li>
-              Ask the community in <a href="https://github.com/yourusername/findesktop/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>
+              Ask the community in <a href="https://github.com/bhushanpoojary/fin-desktop/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a>
             </li>
             <li>
               Review the <a href="/api-reference">API Reference</a> for detailed documentation

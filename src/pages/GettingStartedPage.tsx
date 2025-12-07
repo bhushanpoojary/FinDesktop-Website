@@ -29,7 +29,7 @@ git --version`}</code></pre>
           <div className="docs-page__subsection">
             <h3 className="docs-page__subsection-title">1. Clone the Repository</h3>
             <p>Clone the FinDesktop repository to your local machine:</p>
-            <pre><code>{`git clone https://github.com/yourusername/findesktop.git
+            <pre><code>{`git clone https://github.com/bhushanpoojary/fin-desktop.git
 cd findesktop`}</code></pre>
           </div>
 
@@ -188,7 +188,7 @@ export default MyApp;`}</code></pre>
           <div className="info-box__title">Need Help?</div>
           <p>
             If you run into issues, check our <a href="/faq">FAQ & Troubleshooting</a> page 
-            or visit our <a href="https://github.com/yourusername/findesktop/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a> 
+            or visit our <a href="https://github.com/bhushanpoojary/fin-desktop/discussions" target="_blank" rel="noopener noreferrer">GitHub Discussions</a> 
             to get help from the community.
           </p>
         </div>

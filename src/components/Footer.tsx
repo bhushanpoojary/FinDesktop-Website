@@ -14,7 +14,7 @@ const Footer = () => {
           
           <div className="footer__links">
             <a 
-              href="https://github.com/yourusername/findesktop" 
+              href="https://github.com/bhushanpoojary/fin-desktop" 
               className="footer__link"
               target="_blank"
               rel="noopener noreferrer"
@@ -22,7 +22,7 @@ const Footer = () => {
               GitHub
             </a>
             <a 
-              href="https://github.com/yourusername/findesktop/issues" 
+              href="https://github.com/bhushanpoojary/fin-desktop/issues" 
               className="footer__link"
               target="_blank"
               rel="noopener noreferrer"
@@ -30,7 +30,7 @@ const Footer = () => {
               Issues
             </a>
             <a 
-              href="https://github.com/yourusername/findesktop/discussions" 
+              href="https://github.com/bhushanpoojary/fin-desktop/discussions" 
               className="footer__link"
               target="_blank"
               rel="noopener noreferrer"
