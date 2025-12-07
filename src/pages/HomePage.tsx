@@ -6,24 +6,24 @@ const HomePage = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero">
-        <div className="container">
-          <h1 className="hero__title">FinDesktop</h1>
-          <p className="hero__tagline">
-            A modern, extensible desktop framework for building professional trading and financial applications
-          </p>
-          <div className="hero__buttons">
-            <Link to="/getting-started" className="btn btn--primary btn--large">
-              Get Started
-            </Link>
-            <a 
-              href="https://github.com/yourusername/findesktop" 
-              className="btn btn--secondary btn--large"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on GitHub
-            </a>
-          </div>
+        <h1 className="hero__title">FinDesktop</h1>
+        <p className="hero__subtitle">
+          A powerful, enterprise-grade desktop framework built with Electron. High-performance workspace management, 
+          advanced inter-app communication, and modern UI out of the box.
+        </p>
+        
+        <div className="hero__cta">
+          <Link to="/getting-started" className="btn btn--primary">
+            Get Started →
+          </Link>
+          <a 
+            href="https://github.com/yourusername/findesktop" 
+            className="btn btn--outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on GitHub
+          </a>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
+import Sidebar from './Sidebar';
 import './MainLayout.css';
 
 interface MainLayoutProps {
@@ -10,11 +9,15 @@ interface MainLayoutProps {
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="main-layout">
-      <Header />
-      <main className="main-layout__content">
-        {children}
-      </main>
-      <Footer />
+      <Sidebar />
+      <div className="main-layout__wrapper">
+        <main className="main-layout__content">
+          {children}
+        </main>
+        <footer className="main-layout__footer">
+          <p>© 2024 FinDesktop. MIT License.</p>
+        </footer>
+      </div>
     </div>
   );
 };
