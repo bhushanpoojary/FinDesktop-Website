@@ -114,7 +114,7 @@ const Sidebar = () => {
               key={index}
               to={item.path!}
               className={({ isActive }) =>
-                `sidebar__link ${isActive && location.pathname === item.path ? 'sidebar__link--active' : ''}`
+                `sidebar__link sidebar__link--root ${isActive && location.pathname === item.path ? 'sidebar__link--active' : ''}`
               }
             >
               <span className="sidebar__link-icon">{item.icon}</span>

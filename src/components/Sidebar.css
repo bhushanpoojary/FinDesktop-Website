@@ -188,6 +188,11 @@
   font-size: 0.8125rem;
 }
 
+.sidebar__link--root {
+  text-align: left !important;
+  justify-content: flex-start !important;
+}
+
 .sidebar__link-icon {
   font-size: 1rem;
   line-height: 1;
