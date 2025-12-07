@@ -51,8 +51,9 @@
 }
 
 .sidebar__logo-icon {
-  font-size: 2rem;
-  line-height: 1;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .sidebar__logo-text {
@@ -158,6 +159,7 @@
 .sidebar__link {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.75rem;
   padding: 0.625rem 1rem;
   color: rgba(255, 255, 255, 0.7);

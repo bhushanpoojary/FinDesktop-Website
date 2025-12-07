@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+import logo from '../assets/findesktop-logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,8 @@ const Header = () => {
     <header className="header">
       <div className="header__container">
         <Link to="/" className="header__logo">
-          FinDesktop
+          <img src={logo} alt="FinDesktop Logo" className="header__logo-image" />
+          <span className="header__logo-text">FinDesktop</span>
         </Link>
 
         <button 

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Sidebar.css';
+import logo from '../assets/findesktop-logo.png';
 
 const Sidebar = () => {
   const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started', 'features']);
@@ -58,7 +59,7 @@ const Sidebar = () => {
     <aside className="sidebar">
       <div className="sidebar__header">
         <NavLink to="/" className="sidebar__logo">
-          <div className="sidebar__logo-icon">📊</div>
+          <img src={logo} alt="FinDesktop Logo" className="sidebar__logo-icon" />
           <div className="sidebar__logo-text">
             <div className="sidebar__logo-title">FinDesktop</div>
             <div className="sidebar__logo-subtitle">Enterprise-grade framework</div>

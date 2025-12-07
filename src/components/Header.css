@@ -30,8 +30,22 @@
   transition: all 0.2s ease;
 }
 
-.header__logo:hover {
+.header__logo-image {
+  height: 40px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.header__logo-text {
+  color: #1a2332;
+  transition: color 0.2s ease;
+}
+
+.header__logo:hover .header__logo-text {
   color: #3b82f6;
+}
+
+.header__logo:hover .header__logo-image {
   transform: translateY(-1px);
 }
 
