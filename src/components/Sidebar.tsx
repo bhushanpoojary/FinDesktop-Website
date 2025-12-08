@@ -3,7 +3,12 @@ import { NavLink, useLocation } from 'react-router-dom';
 import './Sidebar.css';
 import logo from '../assets/findesktop-logo.png';
 
-const Sidebar = () => {
+interface SidebarProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
+
+const Sidebar = ({ isOpen = false, onClose }: SidebarProps) => {
   const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started', 'features']);
   const location = useLocation();
 
@@ -55,10 +60,16 @@ const Sidebar = () => {
     }
   ];
 
+  const handleLinkClick = () => {
+    if (onClose) {
+      onClose();
+    }
+  };
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isOpen ? 'sidebar--open' : ''}`}>
       <div className="sidebar__header">
-        <NavLink to="/" className="sidebar__logo">
+        <NavLink to="/" className="sidebar__logo" onClick={handleLinkClick}>
           <img src={logo} alt="FinDesktop Logo" className="sidebar__logo-icon" />
           <div className="sidebar__logo-text">
             <div className="sidebar__logo-title">FinDesktop</div>
@@ -98,6 +109,7 @@ const Sidebar = () => {
                         className={({ isActive }) =>
                           `sidebar__link sidebar__link--sub ${isActive ? 'sidebar__link--active' : ''}`
                         }
+                        onClick={handleLinkClick}
                       >
                         <span className="sidebar__link-icon">{subItem.icon}</span>
                         <span className="sidebar__link-label">{subItem.label}</span>
@@ -116,6 +128,7 @@ const Sidebar = () => {
               className={({ isActive }) =>
                 `sidebar__link sidebar__link--root ${isActive && location.pathname === item.path ? 'sidebar__link--active' : ''}`
               }
+              onClick={handleLinkClick}
             >
               <span className="sidebar__link-icon">{item.icon}</span>
               <div className="sidebar__link-content">
