@@ -12,7 +12,7 @@ import './App.css';
 
 function App() {
   return (
-    <BrowserRouter basename="/FinDesktop-Website">
+    <BrowserRouter>
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
