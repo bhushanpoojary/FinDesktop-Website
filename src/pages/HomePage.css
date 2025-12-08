@@ -22,13 +22,13 @@
 /* Hero Section - Modern Premium Design */
 .hero {
   position: relative;
-  min-height: 650px;
+  min-height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 7rem 2rem 8rem;
+  padding: 4rem 2rem 4.5rem;
   margin-bottom: 0;
   overflow: hidden;
   
@@ -87,9 +87,9 @@
 
 .hero-title {
   position: relative;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   letter-spacing: -0.05em;
   line-height: 1.05;
   
