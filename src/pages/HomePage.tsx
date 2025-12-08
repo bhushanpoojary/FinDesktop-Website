@@ -205,12 +205,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -242,12 +242,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -280,12 +280,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -317,12 +317,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -357,12 +357,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -396,12 +396,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -433,12 +433,12 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="action-card-footer">
-                <button className="action-card-btn">
+                <a href="https://bhushanpoojary.github.io/fin-desktop/" target="_blank" rel="noopener noreferrer" className="action-card-btn">
                   <span>Try Demo</span>
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
