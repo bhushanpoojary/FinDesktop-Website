@@ -1,0 +1,7 @@
+# robots.txt for FinDesktop.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://findesktop.com/sitemap.xml
